@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CarAIDriver.sln"
+    "dotnet.defaultSolution": "Car-Reinforcment-Learning---Unity-ML-Agents.sln"
 }
