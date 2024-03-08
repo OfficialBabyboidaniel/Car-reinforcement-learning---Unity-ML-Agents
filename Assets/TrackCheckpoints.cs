@@ -43,14 +43,12 @@ public class TrackCheckpoints : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(nextCheckpointSingleIndexList[carTransformList.IndexOf(carTransformList[0])]);
+       
     }
 
     public void CarThroughCheckpoint(CheckPointSingle checkPointSingle, Transform carTransform)
     {
         int nextCheckpointSingleIndex = nextCheckpointSingleIndexList[carTransformList.IndexOf(carTransform)];
-        Debug.Log(nextCheckpointSingleIndexList[carTransformList.IndexOf(carTransform)]);
-        Debug.Log("nextCheckpointSingleIndex: " + nextCheckpointSingleIndex);
         //Debug.Log("checkPointSingleList.IndexOf(checkPointSingle) : " + checkPointSingleList.IndexOf(checkPointSingle));
         if (checkPointSingleList.IndexOf(checkPointSingle) == nextCheckpointSingleIndex)
         {

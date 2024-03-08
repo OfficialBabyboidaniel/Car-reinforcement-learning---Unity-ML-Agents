@@ -27,7 +27,7 @@ public class CarDriverAgent : Agent
 
     private void TrackCheckpoints_OnCarCorrectCheckpoint(object sender, EventArgs e)
     {
-        Debug.Log("on car correct event fired");
+
         if ((e as TrackCheckpoints.CarCheckpointEventArgs).carTransform == transform)
         {
             Debug.Log("Added + 1 reward for going through checkpoint");
@@ -36,7 +36,7 @@ public class CarDriverAgent : Agent
     }
     private void TrackCheckpoints_OnCarWrongCheckpoint(object sender, EventArgs e)
     {
-        Debug.Log("on car wrong event fired");
+
 
         if ((e as TrackCheckpoints.CarCheckpointEventArgs).carTransform == transform)
         {
@@ -49,6 +49,7 @@ public class CarDriverAgent : Agent
     public override void OnEpisodeBegin()
     {
         //base.OnEpisodeBegin();
+        Debug.Log("OnEpisodeBegin");
         transform.position = StartPosition.position;
         transform.forward = StartPosition.forward;
         trackCheckpoints.ResetCheckpoints(transform);
@@ -66,52 +67,59 @@ public class CarDriverAgent : Agent
         /* UserControl userControl = GetComponent<UserControl>();
         ControlledCar.UpdateControls(userControl.Horizontal, userControl.Vertical, userControl.Brake); */
 
-        int forwardAction = 0;
+        var continuousActionsOut = actionsOut.ContinuousActions;
+        continuousActionsOut[0] = Input.GetAxis("Horizontal");
+        continuousActionsOut[1] = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            forwardAction = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            forwardAction = 2;
-        }
+        /*     int forwardAction = 0;
 
-        int turnAction = 0;
+            if (Input.GetKey(KeyCode.W))
+            {
+                forwardAction = 1;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                forwardAction = 2;
+            }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            // Right turn action
-            turnAction = 1;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            // Left turn action
-            turnAction = 2;
-        }
+            int turnAction = 0;
 
-        ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
-        discreteActions[0] = forwardAction;
-        discreteActions[1] = turnAction;
+            if (Input.GetKey(KeyCode.D))
+            {
+                // Right turn action
+                turnAction = 1;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                // Left turn action
+                turnAction = 2;
+            }
+
+            ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
+            discreteActions[0] = forwardAction;
+            discreteActions[1] = turnAction; */
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float forwardAmount = 0f;
-        float turnAmount = 0f;
-        switch (actions.DiscreteActions[0])
-        {
-            case 0: forwardAmount = 0f; break;
-            case 1: forwardAmount = +1f; break;
-            case 2: forwardAmount = -1f; break;
-        }
-        switch (actions.DiscreteActions[1])
-        {
-            case 0: turnAmount = 0f; break;
-            case 1: turnAmount = +1f; break;
-            case 2: turnAmount = -1f; break;
-        }
-        ControlledCar.UpdateControls(turnAmount, forwardAmount, false);
+        /*  float forwardAmount = 0f;
+         float turnAmount = 0f;
+         Debug.Log("actions.DiscreteActions[0]: " + actions.DiscreteActions[0]);
+         Debug.Log("actions.DiscreteActions[1]: " + actions.DiscreteActions[1]); 
+         switch (actions.DiscreteActions[0])
+         {
+             case 0: forwardAmount = 0f; break;
+             case 1: forwardAmount = +1f; break;
+             case 2: forwardAmount = -1f; break;
+         }
+         switch (actions.DiscreteActions[1])
+         {
+             case 0: turnAmount = 0f; break;
+             case 1: turnAmount = +1f; break;
+             case 2: turnAmount = -1f; break;
+         } */
+
+        ControlledCar.UpdateControls(actions.ContinuousActions[0], actions.ContinuousActions[1], false);
         //base.OnActionReceived(actions);
     }
 
@@ -127,7 +135,7 @@ public class CarDriverAgent : Agent
     {
         if (other.gameObject.tag == "NegativeWall")
         {
-            Debug.Log("hit negative wall");
+            Debug.Log("inside negative wall");
             AddReward(-0.1f);
         }
     }
