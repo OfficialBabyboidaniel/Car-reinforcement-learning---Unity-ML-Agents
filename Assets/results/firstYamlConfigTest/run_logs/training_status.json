@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "2.2.1+cpu"
+    },
+    "MyAgent": {
+        "checkpoints": [
+            {
+                "steps": 4256422,
+                "file_path": "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4256422.onnx",
+                "reward": -19.61428745303835,
+                "creation_time": 1710254057.2582607,
+                "auxillary_file_paths": [
+                    "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4256422.pt"
+                ]
+            },
+            {
+                "steps": 4313206,
+                "file_path": "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4313206.onnx",
+                "reward": -0.2,
+                "creation_time": 1710254353.2813044,
+                "auxillary_file_paths": [
+                    "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4313206.pt"
+                ]
+            },
+            {
+                "steps": 4499990,
+                "file_path": "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4499990.onnx",
+                "reward": -1.6666666666666667,
+                "creation_time": 1710257828.7343936,
+                "auxillary_file_paths": [
+                    "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4499990.pt"
+                ]
+            },
+            {
+                "steps": 4999990,
+                "file_path": "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4999990.onnx",
+                "reward": -0.7426471254404854,
+                "creation_time": 1710259221.3037288,
+                "auxillary_file_paths": [
+                    "results\\firstYamlConfigTest\\MyAgent\\MyAgent-4999990.pt"
+                ]
+            },
+            {
+                "steps": 5313270,
+                "file_path": "results\\firstYamlConfigTest\\MyAgent\\MyAgent-5313270.onnx",
+                "reward": null,
+                "creation_time": 1710260143.8335063,
+                "auxillary_file_paths": [
+                    "results\\firstYamlConfigTest\\MyAgent\\MyAgent-5313270.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5313270,
+            "file_path": "results\\firstYamlConfigTest\\MyAgent.onnx",
+            "reward": null,
+            "creation_time": 1710260143.8335063,
+            "auxillary_file_paths": [
+                "results\\firstYamlConfigTest\\MyAgent\\MyAgent-5313270.pt"
+            ]
+        }
+    }
+}

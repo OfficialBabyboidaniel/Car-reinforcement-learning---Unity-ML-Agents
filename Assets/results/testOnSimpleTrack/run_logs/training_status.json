@@ -1,0 +1,65 @@
+{
+    "MyAgent": {
+        "checkpoints": [
+            {
+                "steps": 1999984,
+                "file_path": "results\\testOnSimpleTrack\\MyAgent\\MyAgent-1999984.onnx",
+                "reward": 1.202020202020202,
+                "creation_time": 1710347858.5990272,
+                "auxillary_file_paths": [
+                    "results\\testOnSimpleTrack\\MyAgent\\MyAgent-1999984.pt"
+                ]
+            },
+            {
+                "steps": 2499984,
+                "file_path": "results\\testOnSimpleTrack\\MyAgent\\MyAgent-2499984.onnx",
+                "reward": 0.10204081632653061,
+                "creation_time": 1710349999.8023052,
+                "auxillary_file_paths": [
+                    "results\\testOnSimpleTrack\\MyAgent\\MyAgent-2499984.pt"
+                ]
+            },
+            {
+                "steps": 2999984,
+                "file_path": "results\\testOnSimpleTrack\\MyAgent\\MyAgent-2999984.onnx",
+                "reward": 0.08080808080808081,
+                "creation_time": 1710351585.3608763,
+                "auxillary_file_paths": [
+                    "results\\testOnSimpleTrack\\MyAgent\\MyAgent-2999984.pt"
+                ]
+            },
+            {
+                "steps": 3499984,
+                "file_path": "results\\testOnSimpleTrack\\MyAgent\\MyAgent-3499984.onnx",
+                "reward": 0.0,
+                "creation_time": 1710353770.005878,
+                "auxillary_file_paths": [
+                    "results\\testOnSimpleTrack\\MyAgent\\MyAgent-3499984.pt"
+                ]
+            },
+            {
+                "steps": 3610704,
+                "file_path": "results\\testOnSimpleTrack\\MyAgent\\MyAgent-3610704.onnx",
+                "reward": 0.0,
+                "creation_time": 1710354214.6188853,
+                "auxillary_file_paths": [
+                    "results\\testOnSimpleTrack\\MyAgent\\MyAgent-3610704.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3610704,
+            "file_path": "results\\testOnSimpleTrack\\MyAgent.onnx",
+            "reward": 0.0,
+            "creation_time": 1710354214.6188853,
+            "auxillary_file_paths": [
+                "results\\testOnSimpleTrack\\MyAgent\\MyAgent-3610704.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "2.2.1+cpu"
+    }
+}
