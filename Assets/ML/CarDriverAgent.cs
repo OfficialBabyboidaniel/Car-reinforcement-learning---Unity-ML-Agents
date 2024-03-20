@@ -42,8 +42,9 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("Added - 1 reward for going through wrong checkpoint");
             AddReward(-1f);
+            
         }
-
+        
     }
 
     public override void OnEpisodeBegin()
