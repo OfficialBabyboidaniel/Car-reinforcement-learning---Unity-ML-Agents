@@ -42,8 +42,9 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("Added - 1 reward for going through wrong checkpoint");
             AddReward(-1f);
+            
         }
-
+        
     }
 
     public override void OnEpisodeBegin()
@@ -102,23 +103,25 @@ public class CarDriverAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        /*  float forwardAmount = 0f;
-         float turnAmount = 0f;
-         Debug.Log("actions.DiscreteActions[0]: " + actions.DiscreteActions[0]);
-         Debug.Log("actions.DiscreteActions[1]: " + actions.DiscreteActions[1]); 
-         switch (actions.DiscreteActions[0])
-         {
-             case 0: forwardAmount = 0f; break;
-             case 1: forwardAmount = +1f; break;
-             case 2: forwardAmount = -1f; break;
-         }
-         switch (actions.DiscreteActions[1])
-         {
-             case 0: turnAmount = 0f; break;
-             case 1: turnAmount = +1f; break;
-             case 2: turnAmount = -1f; break;
-         } */
+        //   float forwardAmount = 0f;
+        //  float turnAmount = 0f;
+        //  Debug.Log("actions.DiscreteActions[0]: " + actions.DiscreteActions[0]);
+        //  Debug.Log("actions.DiscreteActions[1]: " + actions.DiscreteActions[1]); 
+        //  switch (actions.DiscreteActions[0])
+        //  {
+        //      case 0: forwardAmount = 0f; break;
+        //      case 1: forwardAmount = +1f; break;
+        //      case 2: forwardAmount = -1f; break;
+        //  }
+        //  switch (actions.DiscreteActions[1])
+        //  {
+        //      case 0: turnAmount = 0f; break;
+        //      case 1: turnAmount = +1f; break;
+        //      case 2: turnAmount = -1f; break;
+        //  } 
 
+        // Debug.Log("actions.DiscreteActions[0]: " + actions.DiscreteActions[0]);
+        // Debug.Log("actions.DiscreteActions[1]: " + actions.DiscreteActions[1]);    
         ControlledCar.UpdateControls(actions.ContinuousActions[0], actions.ContinuousActions[1], false);
         //base.OnActionReceived(actions);
     }

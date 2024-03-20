@@ -31336,13 +31336,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 881037641415973556, guid: c3561634431fb8f40830bd4c3b642798,
         type: 3}
+      propertyPath: m_InferenceDevice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 881037641415973556, guid: c3561634431fb8f40830bd4c3b642798,
+        type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 881037641415973556, guid: c3561634431fb8f40830bd4c3b642798,
         type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 881037641415973556, guid: c3561634431fb8f40830bd4c3b642798,
         type: 3}
@@ -31367,7 +31372,7 @@ PrefabInstance:
     - target: {fileID: 7194970445971815609, guid: c3561634431fb8f40830bd4c3b642798,
         type: 3}
       propertyPath: MaxStep
-      value: 1200
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 7194970445971815609, guid: c3561634431fb8f40830bd4c3b642798,
         type: 3}
