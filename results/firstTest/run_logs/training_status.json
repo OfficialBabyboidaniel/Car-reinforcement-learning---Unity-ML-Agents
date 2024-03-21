@@ -61,5 +61,27 @@
                 "results\\firstTest\\My Behavior\\My Behavior-500047.pt"
             ]
         }
+    },
+    "MyAgent": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\firstTest\\MyAgent\\MyAgent-0.onnx",
+                "reward": null,
+                "creation_time": 1710235296.3470092,
+                "auxillary_file_paths": [
+                    "results\\firstTest\\MyAgent\\MyAgent-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\firstTest\\MyAgent.onnx",
+            "reward": null,
+            "creation_time": 1710235296.3470092,
+            "auxillary_file_paths": [
+                "results\\firstTest\\MyAgent\\MyAgent-0.pt"
+            ]
+        }
     }
 }
