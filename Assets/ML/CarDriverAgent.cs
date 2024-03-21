@@ -42,9 +42,43 @@ public class CarDriverAgent : Agent
         {
             Debug.Log("Added - 1 reward for going through wrong checkpoint");
             AddReward(-1f);
-            
+
         }
-        
+
+    }
+
+    private void Update()
+    {
+        // if (ControlledCar.CarDirection == CarController.Direction.Forward && ControlledCar.CarSpeed > 0.1f)
+        // {
+        //     AddReward(0.01f);
+        // }
+        // else if (ControlledCar.CarDirection == CarController.Direction.Backward && ControlledCar.CarSpeed > 0.1f)
+        // {
+        //     AddReward(-0.01f);
+        // }
+
+
+        if (ControlledCar.CarDirection == 1 && ControlledCar.CurrentSpeed > 0.1f)
+        {
+            AddReward(0.001f); //reward for driving forward
+        }
+        else if (ControlledCar.CarDirection == 1 && ControlledCar.CurrentSpeed > 10.0f)
+        {
+            AddReward(0.002f); //reward for driving forward faster
+        }
+        else if (ControlledCar.CarDirection == 1 && ControlledCar.CurrentSpeed > 30.0f)
+        {
+            AddReward(0.004f); //reward for driving forward fast
+        }
+        else if (ControlledCar.CarDirection == -1 && ControlledCar.CurrentSpeed > 0.1f)
+        {
+            AddReward(-0.001f); //penalty for driving backwards
+        }
+        else if (ControlledCar.CarDirection == 0)
+        {
+            AddReward(-0.001f);  // penalty for not moving
+        }
     }
 
     public override void OnEpisodeBegin()
